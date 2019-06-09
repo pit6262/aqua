@@ -668,6 +668,8 @@ label {
     top: 0; }
   .phone__link, .address__link {
     white-space: nowrap; }
+    .phone__link:hover, .address__link:hover {
+      text-decoration: underline; }
   .phone__link, .phone__text, .address__link, .address__text {
     letter-spacing: 0.042rem;
     font-weight: 300; }
@@ -921,7 +923,9 @@ label {
   margin-bottom: 2rem; }
   .services-block a {
     height: 24rem;
-    display: block; }
+    display: block;
+    position: relative;
+    z-index: 2; }
     .services-block a:hover .details-list__item.close {
       display: block; }
   .services-block:before {
@@ -1046,8 +1050,15 @@ label {
   font-size: 1.4rem;
   font-weight: 900;
   letter-spacing: 0.042rem;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   background-image: -webkit-linear-gradient(left, #379cf4, #da1df7);
   background-image: linear-gradient(to right, #379cf4, #da1df7); }
+  .more:hover .icon {
+    color: #fff; }
+  .more:hover span {
+    background-color: transparent;
+    color: #fff; }
   .more span {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1059,7 +1070,14 @@ label {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #fff; }
+    background-color: #fff;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+  .more .icon {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    top: .1rem;
+    color: #4f4f4f; }
 
 .news-block {
   margin-bottom: 7rem; }
