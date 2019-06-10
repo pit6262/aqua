@@ -15,10 +15,61 @@ $(function(){
         $('.styler').styler();
     };
 
-     if($('.other-stocks-slider').length){
+    if($('.slider-for').length){
+	    $('.slider-for').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			fade: true,
+			asNavFor: '.slider-nav',
+			adaptiveHeight:  true,
+		});
+		$('.slider-nav').slick({
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			asNavFor: '.slider-for',
+			centerMode: true,
+			focusOnSelect: true,
+			centerPadding: '0px',
+			appendArrows: '.slider-nav-button',
+			prevArrow: '<button class="slick-arrow slick-prev"><svg class="icon icon-arrow-down-sign-to-navigate"><use xlink:href="#icon-arrow-down-sign-to-navigate"></use></svg></button>',
+        	nextArrow: '<button class="slick-arrow slick-next"><svg class="icon icon-arrow-down-sign-to-navigate"><use xlink:href="#icon-arrow-down-sign-to-navigate"></use></svg></button>',
+			responsive: [
+        		
+        		{
+        			breakpoint: 575,
+        			settings: {
+        				slidesToShow: 4
+        			}
+        		},
+        		{
+        			breakpoint: 360,
+        			settings: {
+        				slidesToShow: 3
+        			}
+        		}
+
+        	]
+		});
+	}
+
+    if($('.news-preview-slider').length){
+        $('.news-preview-slider').slick({
+        	slidesToShow: 1,
+        	slidesToScroll: 1,
+        	asNavFor: '.other-stocks-slider',
+        	arrows: false,
+        	fade: true,
+        	adaptiveHeight:  true,
+        });
+    };
+
+
+    if($('.other-stocks-slider').length){
         $('.other-stocks-slider').slick({
         	slidesToShow: 6,
         	slidesToScroll: 1,
+        	asNavFor: '.news-preview-slider',
         	appendArrows: '.other-stocks-button',
         	prevArrow: '<button class="slick-arrow slick-prev"><svg class="icon icon-arrow-down-sign-to-navigate"><use xlink:href="#icon-arrow-down-sign-to-navigate"></use></svg></button>',
         	nextArrow: '<button class="slick-arrow slick-next"><svg class="icon icon-arrow-down-sign-to-navigate"><use xlink:href="#icon-arrow-down-sign-to-navigate"></use></svg></button>',
@@ -58,6 +109,7 @@ $(function(){
         });
     };
 
+   
     
 	/* ---------------------------------------------- /*
 	 * Tabs
@@ -92,8 +144,19 @@ $(function(){
 		return false
 	})
 
+	$('.price-list__icon').on('click', function(){
+		var el = $(this);
+		el.parents('.price-list__head').next('.price-list__body').slideToggle();
+		el.parents('.price-list__head').toggleClass('active');
+		return false;
+	});
+
 	
-	
+	$('.video__play').on('click', function(){
+		var dataYoutubeLink = $(this).parents('.js-video').attr('data-youtube-link');
+		$(this).parents('.js-video').html('<iframe class="video-frame" src="https://www.youtube.com/embed/'+ dataYoutubeLink +'?autoplay=1" allowfullscreen></iframe>');
+		$('.js-video').addClass('active');
+	});
 });
 
 $slick_slider = $('.promo-services-slider');
@@ -333,7 +396,7 @@ ymaps.ready(init); // карта соберется после загрузки 
 var myMap1; // заглобалим переменную карты чтобы можно было ею вертеть из любого места
 function init () { // функция - собиралка карты и фигни
    var myMap = new ymaps.Map("map", {
-    center: [55.786713, 37.881336], 
+    center: [55.786456, 37.881606], 
     zoom: 17,
     controls: ['geolocationControl', 'zoomControl']
 	});
@@ -347,7 +410,7 @@ function init () { // функция - собиралка карты и фигн
         // Необходимо указать данный тип макета.
         iconLayout: 'default#image',
         // Своё изображение иконки метки.
-        iconImageHref: 'img/pin.png',
+        // iconImageHref: 'img/pin.png',
         // Размеры метки.
         iconImageSize: [43, 45],
         // Смещение левого верхнего угла иконки относительно
