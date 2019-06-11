@@ -15,6 +15,38 @@ $(function(){
         $('.styler').styler();
     };
 
+    /* ---------------------------------------------- /*
+	 * MaskedInput
+	/* ---------------------------------------------- */
+    if($('.tel-mask').length){
+	    $(".tel-mask").mask("+7 (999) 999-99-99");
+	}
+
+	/* ---------------------------------------------- /*
+	 * Fancybox
+	/* ---------------------------------------------- */
+
+    if($('[data-fancybox]').length){
+	    $("[data-fancybox]").fancybox({
+			autoFocus: false,
+			touch: false,
+			buttons: [
+				// "zoom",
+				//"share",
+				// "slideShow",
+				//"fullScreen",
+				//"download",
+				// "thumbs",
+				"close"
+			],
+			
+		});
+	}
+
+	/* ---------------------------------------------- /*
+	 * Slick slider
+	/* ---------------------------------------------- */
+
     if($('.slider-for').length){
 	    $('.slider-for').slick({
 			slidesToShow: 1,
@@ -112,7 +144,7 @@ $(function(){
    
     
 	/* ---------------------------------------------- /*
-	 * Tabs
+	 * Base
 	/* ---------------------------------------------- */
 	$('.tabs a').click(function(){
 		$(this).parents('.tab-wrap').find('.tab-cont').addClass('hide');
@@ -144,10 +176,10 @@ $(function(){
 		return false
 	})
 
-	$('.price-list__icon').on('click', function(){
+	$('.price-list__head').on('click', function(){
 		var el = $(this);
-		el.parents('.price-list__head').next('.price-list__body').slideToggle();
-		el.parents('.price-list__head').toggleClass('active');
+		el.next('.price-list__body').slideToggle();
+		el.toggleClass('active');
 		return false;
 	});
 
@@ -180,6 +212,10 @@ if (!$slick_slider.hasClass('slick-initialized')) {
 	return $slick_slider.slick(settings);
 }
 });
+
+/* ---------------------------------------------- /*
+ * Filter gallery
+/* ---------------------------------------------- */
 
 
 jQuery(document).ready(function($){
@@ -228,30 +264,6 @@ jQuery(document).ready(function($){
 			$(event.target).addClass('selected');
 		}
 	});
-	
-	//close filter dropdown inside lateral .cd-filter 
-	// $('.cd-filter-block h4').on('click', function(){
-	// 	$(this).toggleClass('closed').siblings('.cd-filter-content').slideToggle(300);
-	// })
-
-	//fix lateral filter and gallery on scrolling
-	// $(window).on('scroll', function(){
-	// 	(!window.requestAnimationFrame) ? fixGallery() : window.requestAnimationFrame(fixGallery);
-	// });
-
-	// function fixGallery() {
-	// 	var offsetTop = $('.cd-main-content').offset().top,
-	// 		scrollTop = $(window).scrollTop();
-	// 	( scrollTop >= offsetTop ) ? $('.cd-main-content').addClass('is-fixed') : $('.cd-main-content').removeClass('is-fixed');
-	// }
-
-	/************************************
-		MitItUp filter settings
-		More details: 
-		https://mixitup.kunkalabs.com/
-		or:
-		http://codepen.io/patrickkunka/
-	*************************************/
 
 	buttonFilter.init();
 	$('.cd-gallery ul').mixItUp({
@@ -267,44 +279,7 @@ jQuery(document).ready(function($){
 	    	}
 	    }
 	});
-
-	//search filtering
-	//credits http://codepen.io/edprats/pen/pzAdg
-	var inputText;
-	var $matching = $();
-
-	var delay = (function(){
-		var timer = 0;
-		return function(callback, ms){
-			clearTimeout (timer);
-		    timer = setTimeout(callback, ms);
-		};
-	})();
-
-	$(".cd-filter-content input[type='search']").keyup(function(){
-	  	// Delay function invoked to make sure user stopped typing
-	  	delay(function(){
-	    	inputText = $(".cd-filter-content input[type='search']").val().toLowerCase();
-	   		// Check to see if input field is empty
-	    	if ((inputText.length) > 0) {            
-	      		$('.mix').each(function() {
-		        	var $this = $(this);
-		        
-		        	// add item to be filtered out if input text matches items inside the title   
-		        	if($this.attr('class').toLowerCase().match(inputText)) {
-		          		$matching = $matching.add(this);
-		        	} else {
-		          		// removes any previously matched item
-		          		$matching = $matching.not(this);
-		        	}
-	      		});
-	      		$('.cd-gallery ul').mixItUp('filter', $matching);
-	    	} else {
-	      		// resets the filter to show all item if input is empty
-	      		$('.cd-gallery ul').mixItUp('filter', 'all');
-	    	}
-	  	}, 200 );
-	});
+	
 });
 
 /*****************************************************
@@ -392,34 +367,23 @@ var buttonFilter = {
 };
 
 
-ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
-var myMap1; // заглобалим переменную карты чтобы можно было ею вертеть из любого места
-function init () { // функция - собиралка карты и фигни
+ymaps.ready(init); 
+var myMap1; 
+function init () { 
    var myMap = new ymaps.Map("map", {
     center: [55.786456, 37.881606], 
-    zoom: 17,
+    zoom: 15,
     controls: ['geolocationControl', 'zoomControl']
 	});
 	myMap.behaviors.disable('scrollZoom', 'drag'); 
 
 	myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        // hintContent: 'Собственный значок метки',
-        // balloonContent: 'Это красивая метка'
+
     }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
         iconLayout: 'default#image',
-        // Своё изображение иконки метки.
-        // iconImageHref: 'img/pin.png',
-        // Размеры метки.
-        iconImageSize: [43, 45],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
+
         
     })
 
-
-
-	/* Добавляем метки на карту */
 	myMap.geoObjects.add(myPlacemark);
 }
