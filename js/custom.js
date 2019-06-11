@@ -366,24 +366,25 @@ var buttonFilter = {
   	}
 };
 
+if($('#map').length){
+	ymaps.ready(init); 
+	var myMap1; 
+	function init () { 
+	   var myMap = new ymaps.Map("map", {
+	    center: [55.786456, 37.881606], 
+	    zoom: 15,
+	    controls: ['geolocationControl', 'zoomControl']
+		});
+		myMap.behaviors.disable('scrollZoom', 'drag'); 
 
-ymaps.ready(init); 
-var myMap1; 
-function init () { 
-   var myMap = new ymaps.Map("map", {
-    center: [55.786456, 37.881606], 
-    zoom: 15,
-    controls: ['geolocationControl', 'zoomControl']
-	});
-	myMap.behaviors.disable('scrollZoom', 'drag'); 
+		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
 
-	myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+	    }, {
+	        iconLayout: 'default#image',
 
-    }, {
-        iconLayout: 'default#image',
+	        
+	    })
 
-        
-    })
-
-	myMap.geoObjects.add(myPlacemark);
+		myMap.geoObjects.add(myPlacemark);
+	}
 }
