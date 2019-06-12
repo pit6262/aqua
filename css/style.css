@@ -83,46 +83,6 @@ a {
   *:before, *:after {
     box-sizing: border-box; }
 
-@font-face {
-  font-family: "PFBagueSansPro";
-  font-display: swap;
-  src: url("../fonts/PFBagueSansProLight.eot");
-  src: url("../fonts/PFBagueSansProLight.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansProLight.woff2") format("woff2"), url("../fonts/PFBagueSansProLight.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansProLight.ttf") format("truetype"), url("../fonts/PFBagueSansProLight.svg#PFBagueSansProLight") format("svg");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: "PFBagueSansPro";
-  font-display: swap;
-  src: url("../fonts/PFBagueSansPro.eot");
-  src: url("../fonts/PFBagueSansPro.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansPro.woff2") format("woff2"), url("../fonts/PFBagueSansPro.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansPro.ttf") format("truetype"), url("../fonts/PFBagueSansPro.svg#PFBagueSansPro") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: "PFBagueSansPro";
-  font-display: swap;
-  src: url("../fonts/PFBagueSansProMedium.eot");
-  src: url("../fonts/PFBagueSansProMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansProMedium.woff2") format("woff2"), url("../fonts/PFBagueSansProMedium.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansProMedium.ttf") format("truetype"), url("../fonts/PFBagueSansProMedium.svg#PFBagueSansProMedium") format("svg");
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: "PFBagueSansPro";
-  font-display: swap;
-  src: url("../fonts/PFBagueSansProBold.eot");
-  src: url("../fonts/PFBagueSansProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansProBold.woff2") format("woff2"), url("../fonts/PFBagueSansProBold.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansProBold.ttf") format("truetype"), url("../fonts/PFBagueSansProBold.svg#PFBagueSansProBold") format("svg");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: "PFBagueSansPro";
-  font-display: swap;
-  src: url("../fonts/PFBagueSansProBlack.eot");
-  src: url("../fonts/PFBagueSansProBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansProBlack.woff2") format("woff2"), url("../fonts/PFBagueSansProBlack.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansProBlack.ttf") format("truetype"), url("../fonts/PFBagueSansProBlack.svg#PFBagueSansProBlack") format("svg");
-  font-weight: 900;
-  font-style: normal; }
-
 html {
   font-size: 62.5%; }
 
@@ -2214,6 +2174,46 @@ h4.block__title {
       border-radius: 50%;
       text-indent: -999px;
       overflow: hidden; }
+
+@font-face {
+  font-family: "PFBagueSansPro";
+  font-display: swap;
+  src: url("../fonts/PFBagueSansProLight.eot");
+  src: url("../fonts/PFBagueSansProLight.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansProLight.woff2") format("woff2"), url("../fonts/PFBagueSansProLight.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansProLight.ttf") format("truetype"), url("../fonts/PFBagueSansProLight.svg#PFBagueSansProLight") format("svg");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "PFBagueSansPro";
+  font-display: swap;
+  src: url("../fonts/PFBagueSansPro.eot");
+  src: url("../fonts/PFBagueSansPro.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansPro.woff2") format("woff2"), url("../fonts/PFBagueSansPro.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansPro.ttf") format("truetype"), url("../fonts/PFBagueSansPro.svg#PFBagueSansPro") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "PFBagueSansPro";
+  font-display: swap;
+  src: url("../fonts/PFBagueSansProMedium.eot");
+  src: url("../fonts/PFBagueSansProMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansProMedium.woff2") format("woff2"), url("../fonts/PFBagueSansProMedium.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansProMedium.ttf") format("truetype"), url("../fonts/PFBagueSansProMedium.svg#PFBagueSansProMedium") format("svg");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "PFBagueSansPro";
+  font-display: swap;
+  src: url("../fonts/PFBagueSansProBold.eot");
+  src: url("../fonts/PFBagueSansProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansProBold.woff2") format("woff2"), url("../fonts/PFBagueSansProBold.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansProBold.ttf") format("truetype"), url("../fonts/PFBagueSansProBold.svg#PFBagueSansProBold") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "PFBagueSansPro";
+  font-display: swap;
+  src: url("../fonts/PFBagueSansProBlack.eot");
+  src: url("../fonts/PFBagueSansProBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansProBlack.woff2") format("woff2"), url("../fonts/PFBagueSansProBlack.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansProBlack.ttf") format("truetype"), url("../fonts/PFBagueSansProBlack.svg#PFBagueSansProBlack") format("svg");
+  font-weight: 900;
+  font-style: normal; }
 
 /* 6. FOOTER */
 /* ================================================ */

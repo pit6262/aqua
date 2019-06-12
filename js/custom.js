@@ -190,9 +190,7 @@ $(function(){
 	}
 
 });
-window.onload = function () {
 
-}
 window.onload = function () {
 
 	ymaps.ready(init); 
