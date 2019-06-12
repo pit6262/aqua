@@ -92,6 +92,7 @@ $(function(){
         	appendArrows: '.other-stocks-button',
         	prevArrow: '<button class="slick-arrow slick-prev"><svg class="icon icon-arrow-down-sign-to-navigate"><use xlink:href="#icon-arrow-down-sign-to-navigate"></use></svg></button>',
         	nextArrow: '<button class="slick-arrow slick-next"><svg class="icon icon-arrow-down-sign-to-navigate"><use xlink:href="#icon-arrow-down-sign-to-navigate"></use></svg></button>',
+        	focusOnSelect: true,
         	responsive: [
         		{
         			breakpoint: 1230,
@@ -144,14 +145,20 @@ $(function(){
 
 
 
-	$('.navbar-menu__arrow').on('click', function(){
-		$(this).toggleClass('active')
-		$(this).parent().toggleClass('open').find('.dropdown-menu').toggleClass('open')
-	})
+	// $('.navbar-menu__arrow').on('click', function(){
+	// 	$(this).toggleClass('active')
+	// 	$(this).parent().toggleClass('open').find('.dropdown-menu').toggleClass('open')
+	// })
 	$('.navbar-toggle').on('click', function(){
 		$(this).toggleClass('active')
-		$('.navbar').toggleClass('open')
+		$('.navbar-mobile').toggleClass('open')
 	})
+
+	$('.dropdown-item > .navbar-mobile-menu__link').on('click', function(){
+		$(this).toggleClass('active').next().slideToggle();
+	})
+
+	
 
 	$('.close-map').on('click', function(){
 		$('#map').slideToggle(200);
@@ -182,35 +189,11 @@ $(function(){
 
 
 	if($('.instagram-list').length){
-		setTimeout( function(){  
-			$('.instagram-list').append('<iframe class="demo-preview-iframe" src="https://elfsight.com/wp-content/themes/elfsight/legacy/instalink/includes/instalink.php?username=aquacars_official&amp;hashtag=&amp;lang=ru&amp;show_heading=true&amp;scroll=false&amp;image_size=large&amp;width=100%25&amp;responsive=true&amp;height=860px&amp;bg_color=%23285989&amp;content_bg_color=%23F8F8F8&amp;font_color=%23FFFFFF&amp;ban=&amp;cache_media_time=0" style="width: 100%; height: 860px;"></iframe>'); 
-		}, 2000);
+		
+		$('.instagram-list').append('<iframe class="demo-preview-iframe" src="https://elfsight.com/wp-content/themes/elfsight/legacy/instalink/includes/instalink.php?username=aquacars_official&amp;hashtag=&amp;lang=ru&amp;show_heading=true&amp;scroll=false&amp;image_size=large&amp;width=100%25&amp;responsive=true&amp;height=860px&amp;bg_color=%23285989&amp;content_bg_color=%23F8F8F8&amp;font_color=%23FFFFFF&amp;ban=&amp;cache_media_time=0" style="width: 100%; height: 860px;"></iframe>'); 
 	}
 
-	if($('.promo-services-slider').length){
-		$slick_slider = $('.promo-services-slider');
-		settings = {
-			arrows: false,
-			autoplay: true,
-			autoplaySpeed: 2000,
-		}
-		$slick_slider.slick(settings);
-
-
-		$(window).on('resize load', function() {
-		if ($(window).width() > 768) {
-			if ($slick_slider.hasClass('slick-initialized')) {
-			$slick_slider.slick('unslick');
-		}
-		return
-		}
-
-		if (!$slick_slider.hasClass('slick-initialized')) {
-			return $slick_slider.slick(settings);
-		}
-		});
-
-	}
+	
 });
 
 
@@ -265,7 +248,7 @@ jQuery(document).ready(function($){
 
 	//mobile version - detect click event on filters tab
 	var filter_tab_placeholder = $('.cd-tab-filter .placeholder a'),
-		filter_tab_placeholder_default_value = 'Select',
+		filter_tab_placeholder_default_value = 'Выберите категорию',
 		filter_tab_placeholder_text = filter_tab_placeholder.text();
 	
 	$('.cd-tab-filter li').on('click', function(event){
