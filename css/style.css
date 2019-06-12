@@ -1132,9 +1132,7 @@ h4.block__title {
   bottom: 0;
   left: 0;
   overflow: hidden;
-  z-index: 1;
-  background: url("../img/promo2.jpg") no-repeat;
-  background-size: cover; }
+  z-index: 1; }
 
 .video-bg > video {
   position: absolute;
