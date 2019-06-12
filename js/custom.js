@@ -152,6 +152,13 @@ $(function(){
 	$('.navbar-toggle').on('click', function(){
 		$(this).toggleClass('active')
 		$('.navbar-mobile').toggleClass('open')
+		$('.navbar-mobile-overlay').toggleClass('open')
+	})
+
+	$('.navbar-mobile-overlay').on('click', function(){
+		$('.navbar-toggle').removeClass('active')
+		$('.navbar-mobile').removeClass('open')
+		$('.navbar-mobile-overlay').removeClass('open')
 	})
 
 	$('.dropdown-item > .navbar-mobile-menu__link').on('click', function(){
