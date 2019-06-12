@@ -210,11 +210,8 @@ if($('.promo-services-slider').length){
 }
 
 
-window.onload = function () {
-	setTimeout( function(){  
-		ymaps.ready(init); 
-		var myMap; 
-		function init () { 
+function init (ymaps) {
+	
 		   var myMap = new ymaps.Map("map", {
 		    center: [55.786456, 37.881606], 
 		    zoom: 15,
@@ -231,8 +228,7 @@ window.onload = function () {
 		    })
 
 			myMap.geoObjects.add(myPlacemark);
-		}
-	}, 3000);
+		
 }
 
 
