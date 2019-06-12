@@ -210,11 +210,7 @@ $(function(){
 	}
 });
 
-$(window).on('load', function() {
-    if(window.innerWidth > 1024) {
-   		$('.video-bg').append('<video preload="none" loop muted autoplay poster="img/promo2.jpg"><source src="img/main_page_video.mp4" type="video/mp4"><source src="img/main_page_video.webm" type="video/webm"></video>');
-    }
-});
+
 window.onload = function () {
 	setTimeout( function(){  
 		ymaps.ready(init); 
