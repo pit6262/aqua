@@ -7,14 +7,6 @@ $(window).on('load', function(){
 
 $(function(){
 
-
-	/* ---------------------------------------------- /*
-	 * Styler
-	/* ---------------------------------------------- */
-    if($('.styler').length){
-        $('.styler').styler();
-    };
-
     /* ---------------------------------------------- /*
 	 * MaskedInput
 	/* ---------------------------------------------- */
@@ -191,29 +183,6 @@ $(function(){
 
 });
 
-window.onload = function () {
-
-	ymaps.ready(init); 
-	var myMap; 
-	function init () { 
-	   var myMap = new ymaps.Map("map", {
-	    center: [55.786456, 37.881606], 
-	    zoom: 15,
-	    controls: ['geolocationControl', 'zoomControl']
-		});
-		myMap.behaviors.disable('scrollZoom', 'drag'); 
-
-		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-
-	    }, {
-	        iconLayout: 'default#image',
-
-	        
-	    })
-
-		myMap.geoObjects.add(myPlacemark);
-	}
-}
 
 if($('.promo-services-slider').length){
 	$slick_slider = $('.promo-services-slider');
@@ -239,6 +208,34 @@ if($('.promo-services-slider').length){
 	});
 
 }
+
+
+window.onload = function () {
+	setTimeout( function(){  
+		ymaps.ready(init); 
+		var myMap; 
+		function init () { 
+		   var myMap = new ymaps.Map("map", {
+		    center: [55.786456, 37.881606], 
+		    zoom: 15,
+		    controls: ['geolocationControl', 'zoomControl']
+			});
+			myMap.behaviors.disable('scrollZoom', 'drag'); 
+
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
+		    }, {
+		        iconLayout: 'default#image',
+
+		        
+		    })
+
+			myMap.geoObjects.add(myPlacemark);
+		}
+	}, 3000);
+}
+
+
 
 
 /* ---------------------------------------------- /*
