@@ -142,6 +142,8 @@ $(function(){
 		return false
 	});
 
+
+
 	$('.navbar-menu__arrow').on('click', function(){
 		$(this).toggleClass('active')
 		$(this).parent().toggleClass('open').find('.dropdown-menu').toggleClass('open')
@@ -177,39 +179,42 @@ $(function(){
 		$('.js-video').addClass('active');
 	});
 
+
+
 	if($('.instagram-list').length){
 		$('.instagram-list').append('<iframe class="demo-preview-iframe" src="https://elfsight.com/wp-content/themes/elfsight/legacy/instalink/includes/instalink.php?username=aquacars_official&amp;hashtag=&amp;lang=ru&amp;show_heading=true&amp;scroll=false&amp;image_size=large&amp;width=100%25&amp;responsive=true&amp;height=860px&amp;bg_color=%23285989&amp;content_bg_color=%23F8F8F8&amp;font_color=%23FFFFFF&amp;ban=&amp;cache_media_time=0" style="width: 100%; height: 860px;"></iframe>'); 
 	}
 	if($('.promo-services-slider').length){
-	$slick_slider = $('.promo-services-slider');
-	settings = {
-		arrows: false,
-		autoplay: true,
-		autoplaySpeed: 2000,
-	}
-	$slick_slider.slick(settings);
+		$slick_slider = $('.promo-services-slider');
+		settings = {
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 2000,
+		}
+		$slick_slider.slick(settings);
 
 
-	$(window).on('resize load', function() {
-	if ($(window).width() > 768) {
-		if ($slick_slider.hasClass('slick-initialized')) {
-		$slick_slider.slick('unslick');
-	}
-	return
-	}
+		$(window).on('resize load', function() {
+		if ($(window).width() > 768) {
+			if ($slick_slider.hasClass('slick-initialized')) {
+			$slick_slider.slick('unslick');
+		}
+		return
+		}
 
-	if (!$slick_slider.hasClass('slick-initialized')) {
-		return $slick_slider.slick(settings);
-	}
-	});
+		if (!$slick_slider.hasClass('slick-initialized')) {
+			return $slick_slider.slick(settings);
+		}
+		});
 
-}
+	}
 });
 
-
-
-
-
+$(window).on('load', function() {
+    if(window.innerWidth > 1024) {
+   		$('.video-bg').append('<video preload="none" loop muted autoplay poster="img/promo2.jpg"><source src="img/main_page_video.mp4" type="video/mp4"><source src="img/main_page_video.webm" type="video/webm"></video>');
+    }
+});
 window.onload = function () {
 	setTimeout( function(){  
 		ymaps.ready(init); 
