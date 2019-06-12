@@ -1875,7 +1875,10 @@ h4.block__title {
 .slider-nav {
   margin: 0 -1rem 2rem; }
   .slider-nav img {
-    width: 100%; }
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
   .slider-nav .slick-slide {
     padding: 0 1rem;
     background-color: #f7f7f7;
@@ -2340,8 +2343,9 @@ h4.block__title {
   .section__title, h1:not([class]), h2:not([class]) {
     font-size: 5rem;
     line-height: 1; }
-  .heading__title {
-    font-size: 3.5rem; }
+  .heading__title, h3:not([class]), .h3 {
+    font-size: 3.5rem;
+    line-height: 1.3; }
   /* 5.1 ROMO -=-=-=-=-=-=-=-= */
   .promo {
     min-height: 1px; }
@@ -2349,6 +2353,8 @@ h4.block__title {
       padding: 6rem 0 8rem; }
     .promo-services-slider {
       margin: 5rem 0; }
+  .video-bg {
+    display: none; }
   /* 5.3 PRICES -=-=-=-=-=-=-=-= */
   .menu-list .menu-block {
     width: calc(33.33% - 3rem); }
@@ -2573,7 +2579,7 @@ h4.block__title {
     .navbar-menu {
       display: block; }
       .navbar-menu__item {
-        margin-right: 0;
+        margin-left: 0;
         border-bottom: .1rem solid #eeefef; }
         .navbar-menu__item.open .navbar-menu__link > span:before {
           width: calc(100% + .8rem); }
@@ -2689,6 +2695,8 @@ h4.block__title {
     font-size: 1.4rem; }
   .heading .section__title:before {
     top: 3.5rem; }
+  .box-bread-crumbs {
+    margin-bottom: 2rem; }
   /* 5.1 ROMO -=-=-=-=-=-=-=-= */
   .promo h1 {
     margin-bottom: .6rem; }
@@ -2699,6 +2707,8 @@ h4.block__title {
     .promo-services:after {
       display: none !important; }
   /* 5.2 HEADING -=-=-=-=-=-=-=-= */
+  .heading {
+    padding-top: 4.5rem; }
   .brand-item {
     height: 13rem;
     padding-right: 1.5rem !important;
@@ -2768,12 +2778,8 @@ h4.block__title {
   .single-info__footer .single-info__title {
     max-width: none; }
   /* 5.10 About -=-=-=-=-=-=-=-= */
-  .advantages-item {
-    margin-bottom: 3rem; }
-    .advantages-item__text {
-      padding-top: 0;
-      padding-left: 0;
-      padding-right: 0; }
+  .advantages-item__title {
+    font-size: 2.2rem; }
   /* 5.12 FILTER -=-=-=-=-=-=-=-= */
   .cd-image-label:before {
     height: 1.8rem !important;
@@ -2860,8 +2866,7 @@ h4.block__title {
     font-size: 2rem; }
   /* 5.2 HEADING -=-=-=-=-=-=-=-= */
   .brand-item {
-    border-right: none !important;
-    border-bottom: .1rem solid #f2f2f2 !important; }
+    height: 11rem; }
   /* 5.3 PRICES -=-=-=-=-=-=-=-= */
   .menu-list .menu-block {
     width: calc(100% - 3rem); }
@@ -2901,6 +2906,13 @@ h4.block__title {
       font-size: 3.5rem; }
     .contacts-block__title {
       font-size: 1.5rem; }
+  /* 5.10 About -=-=-=-=-=-=-=-= */
+  .advantages-item {
+    margin-bottom: 3rem; }
+    .advantages-item__text {
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 0; }
   /* 5.11 Work -=-=-=-=-=-=-=-= */
   .project-navigation {
     -webkit-box-orient: vertical;

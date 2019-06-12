@@ -71,15 +71,10 @@ $(function(){
         		{
         			breakpoint: 575,
         			settings: {
-        				slidesToShow: 4
-        			}
-        		},
-        		{
-        			breakpoint: 360,
-        			settings: {
         				slidesToShow: 3
         			}
-        		}
+        		},
+        		
 
         	]
 		});
@@ -189,29 +184,56 @@ $(function(){
 		$(this).parents('.js-video').html('<iframe class="video-frame" src="https://www.youtube.com/embed/'+ dataYoutubeLink +'?autoplay=1" allowfullscreen></iframe>');
 		$('.js-video').addClass('active');
 	});
+
+
+	ymaps.ready(init); 
+	var myMap; 
+	function init () { 
+	   var myMap = new ymaps.Map("map", {
+	    center: [55.786456, 37.881606], 
+	    zoom: 15,
+	    controls: ['geolocationControl', 'zoomControl']
+		});
+		myMap.behaviors.disable('scrollZoom', 'drag'); 
+
+		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+
+	    }, {
+	        iconLayout: 'default#image',
+
+	        
+	    })
+
+		myMap.geoObjects.add(myPlacemark);
+	}
 });
 
-$slick_slider = $('.promo-services-slider');
-settings = {
-	arrows: false,
-	autoplay: true,
-	autoplaySpeed: 2000,
-}
-$slick_slider.slick(settings);
+
+if($('.promo-services-slider').length){
+	$slick_slider = $('.promo-services-slider');
+	settings = {
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 2000,
+	}
+	$slick_slider.slick(settings);
 
 
-$(window).on('resize load', function() {
-if ($(window).width() > 768) {
-	if ($slick_slider.hasClass('slick-initialized')) {
-	$slick_slider.slick('unslick');
-}
-return
+	$(window).on('resize load', function() {
+	if ($(window).width() > 768) {
+		if ($slick_slider.hasClass('slick-initialized')) {
+		$slick_slider.slick('unslick');
+	}
+	return
+	}
+
+	if (!$slick_slider.hasClass('slick-initialized')) {
+		return $slick_slider.slick(settings);
+	}
+	});
+
 }
 
-if (!$slick_slider.hasClass('slick-initialized')) {
-	return $slick_slider.slick(settings);
-}
-});
 
 /* ---------------------------------------------- /*
  * Filter gallery
@@ -365,26 +387,3 @@ var buttonFilter = {
 		}
   	}
 };
-
-if($('#map').length){
-	ymaps.ready(init); 
-	var myMap1; 
-	function init () { 
-	   var myMap = new ymaps.Map("map", {
-	    center: [55.786456, 37.881606], 
-	    zoom: 15,
-	    controls: ['geolocationControl', 'zoomControl']
-		});
-		myMap.behaviors.disable('scrollZoom', 'drag'); 
-
-		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-
-	    }, {
-	        iconLayout: 'default#image',
-
-	        
-	    })
-
-		myMap.geoObjects.add(myPlacemark);
-	}
-}
