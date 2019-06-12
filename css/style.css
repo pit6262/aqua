@@ -83,143 +83,9 @@ a {
   *:before, *:after {
     box-sizing: border-box; }
 
-/* ==========================
- *     SLICK SLIDER
- * ========================*/
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent; }
-
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0; }
-  .slick-list:focus {
-    outline: none; }
-  .slick-list.dragging {
-    cursor: pointer;
-    cursor: hand; }
-
-.slick-slider .slick-track, .slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-.slick-track {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: block; }
-  .slick-track:before {
-    display: table;
-    content: ''; }
-  .slick-track:after {
-    display: table;
-    content: '';
-    clear: both; }
-
-.slick-loading .slick-track {
-  visibility: hidden; }
-
-[dir='rtl'] .slick-slide {
-  float: right; }
-
-.slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px; }
-  .slick-slide img {
-    display: block; }
-  .slick-slide.slick-loading img {
-    display: none; }
-  .slick-slide.dragging img {
-    pointer-events: none; }
-  .slick-slide:focus {
-    outline: none; }
-
-.slick-initialized .slick-slide {
-  display: block; }
-
-.slick-loading .slick-slide {
-  visibility: hidden; }
-
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent; }
-
-.slick-arrow.slick-hidden {
-  display: none; }
-
-.slick-arrow {
-  position: static;
-  width: 5.1rem;
-  height: 5.1rem;
-  border: 0.1rem solid #379cf4;
-  background-color: #379cf4;
-  color: #fff;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-  margin-right: .2rem;
-  -webkit-transition: all 0.2s linear;
-  transition: all 0.2s linear; }
-  .slick-arrow:hover {
-    background: #2f85d0; }
-
-.slick-prev .icon {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  font-size: 2.2rem;
-  position: relative;
-  top: .1rem;
-  right: .1rem; }
-
-.slick-next .icon {
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  font-size: 2.2rem;
-  position: relative;
-  top: .1rem;
-  left: .1rem; }
-
-.slick-disabled {
-  opacity: 0.6; }
-
-.slick-dots {
-  list-style: none;
-  text-align: center; }
-  .slick-dots li {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 1rem; }
-    .slick-dots li button {
-      border: .1rem solid red;
-      background-color: transparent;
-      padding: 0;
-      height: 2rem;
-      width: 2rem;
-      border-radius: 50%;
-      text-indent: -999px;
-      overflow: hidden; }
-
 @font-face {
   font-family: "PFBagueSansPro";
+  font-display: swap;
   src: url("../fonts/PFBagueSansProLight.eot");
   src: url("../fonts/PFBagueSansProLight.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansProLight.woff2") format("woff2"), url("../fonts/PFBagueSansProLight.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansProLight.ttf") format("truetype"), url("../fonts/PFBagueSansProLight.svg#PFBagueSansProLight") format("svg");
   font-weight: 300;
@@ -227,6 +93,7 @@ a {
 
 @font-face {
   font-family: "PFBagueSansPro";
+  font-display: swap;
   src: url("../fonts/PFBagueSansPro.eot");
   src: url("../fonts/PFBagueSansPro.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansPro.woff2") format("woff2"), url("../fonts/PFBagueSansPro.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansPro.ttf") format("truetype"), url("../fonts/PFBagueSansPro.svg#PFBagueSansPro") format("svg");
   font-weight: 400;
@@ -234,6 +101,7 @@ a {
 
 @font-face {
   font-family: "PFBagueSansPro";
+  font-display: swap;
   src: url("../fonts/PFBagueSansProMedium.eot");
   src: url("../fonts/PFBagueSansProMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansProMedium.woff2") format("woff2"), url("../fonts/PFBagueSansProMedium.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansProMedium.ttf") format("truetype"), url("../fonts/PFBagueSansProMedium.svg#PFBagueSansProMedium") format("svg");
   font-weight: 500;
@@ -241,6 +109,7 @@ a {
 
 @font-face {
   font-family: "PFBagueSansPro";
+  font-display: swap;
   src: url("../fonts/PFBagueSansProBold.eot");
   src: url("../fonts/PFBagueSansProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansProBold.woff2") format("woff2"), url("../fonts/PFBagueSansProBold.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansProBold.ttf") format("truetype"), url("../fonts/PFBagueSansProBold.svg#PFBagueSansProBold") format("svg");
   font-weight: 700;
@@ -248,6 +117,7 @@ a {
 
 @font-face {
   font-family: "PFBagueSansPro";
+  font-display: swap;
   src: url("../fonts/PFBagueSansProBlack.eot");
   src: url("../fonts/PFBagueSansProBlack.eot?#iefix") format("embedded-opentype"), url("../fonts/PFBagueSansProBlack.woff2") format("woff2"), url("../fonts/PFBagueSansProBlack.woff?ver1.0") format("woff"), url("../fonts/PFBagueSansProBlack.ttf") format("truetype"), url("../fonts/PFBagueSansProBlack.svg#PFBagueSansProBlack") format("svg");
   font-weight: 900;
@@ -2208,6 +2078,142 @@ h4.block__title {
 #popup-callback {
   max-width: 78rem;
   width: 100%; }
+
+/* 5.14 Slick -=-=-=-=-=-=-=-= */
+/* ==========================
+ *     SLICK SLIDER
+ * ========================*/
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block; }
+  .slick-track:before {
+    display: table;
+    content: ''; }
+  .slick-track:after {
+    display: table;
+    content: '';
+    clear: both; }
+
+.slick-loading .slick-track {
+  visibility: hidden; }
+
+[dir='rtl'] .slick-slide {
+  float: right; }
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-slide:focus {
+    outline: none; }
+
+.slick-initialized .slick-slide {
+  display: block; }
+
+.slick-loading .slick-slide {
+  visibility: hidden; }
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+.slick-arrow {
+  position: static;
+  width: 5.1rem;
+  height: 5.1rem;
+  border: 0.1rem solid #379cf4;
+  background-color: #379cf4;
+  color: #fff;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  margin-right: .2rem;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+  .slick-arrow:hover {
+    background: #2f85d0; }
+
+.slick-prev .icon {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font-size: 2.2rem;
+  position: relative;
+  top: .1rem;
+  right: .1rem; }
+
+.slick-next .icon {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  font-size: 2.2rem;
+  position: relative;
+  top: .1rem;
+  left: .1rem; }
+
+.slick-disabled {
+  opacity: 0.6; }
+
+.slick-dots {
+  list-style: none;
+  text-align: center; }
+  .slick-dots li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 1rem; }
+    .slick-dots li button {
+      border: .1rem solid red;
+      background-color: transparent;
+      padding: 0;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      text-indent: -999px;
+      overflow: hidden; }
 
 /* 6. FOOTER */
 /* ================================================ */
