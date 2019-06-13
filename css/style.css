@@ -715,11 +715,12 @@ label {
         z-index: 2;
         display: block; }
       .navbar-menu__link .ellipses {
-        height: 2rem;
+        height: 1.8rem;
         font-size: 0; }
         .navbar-menu__link .ellipses .icon {
           line-height: 1.4rem;
-          font-size: 2.2rem; }
+          font-size: 2.2rem;
+          top: -.2rem; }
 
 .dropdown-menu {
   position: absolute;
@@ -2395,12 +2396,14 @@ h4.block__title {
       top: 2.7rem;
       height: 2.2rem;
       width: 28rem; }
-  .section__title, h1:not([class]), h2:not([class]) {
+  .section__title, h1:not([class]), h2:not([class]), .heading .section__title {
     font-size: 5rem;
-    line-height: 1; }
+    line-height: 1.1; }
   .heading__title, h3:not([class]), .h3 {
     font-size: 3.5rem;
     line-height: 1.3; }
+  .heading .section__title:before {
+    top: 2.7rem; }
   /* 5.1 ROMO -=-=-=-=-=-=-=-= */
   .promo {
     min-height: 1px; }
@@ -2765,7 +2768,7 @@ h4.block__title {
   .section__title,
   h1:not([class]),
   h2:not([class]),
-  h3.block__title {
+  h3.block__title, .heading .section__title {
     font-size: 3.5rem; }
   h4.block__title {
     font-size: 2.6rem; }
@@ -2776,7 +2779,7 @@ h4.block__title {
   .block__description {
     font-size: 1.4rem; }
   .heading .section__title:before {
-    top: 3.5rem; }
+    top: 2rem; }
   .box-bread-crumbs {
     margin-bottom: 2rem; }
   /* 5.1 ROMO -=-=-=-=-=-=-=-= */
@@ -3038,7 +3041,8 @@ h4.block__title {
     .single-info__footer .icon {
       display: none; }
     .single-info__footer .single-info__title {
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      margin-right: 0; }
   /* 5.13 Popup -=-=-=-=-=-=-=-= */
   .popup__title {
     font-size: 2.3rem; } }
