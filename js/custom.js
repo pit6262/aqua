@@ -21,7 +21,7 @@ $(function(){
     if($('[data-fancybox]').length){
 	    $("[data-fancybox]").fancybox({
 			autoFocus: false,
-			touch: false,
+			// touch: false,
 			buttons: [
 				// "zoom",
 				//"share",
@@ -80,6 +80,33 @@ $(function(){
         	arrows: false,
         	fade: true,
         	adaptiveHeight:  true,
+        });
+    };
+
+    if($('.project-navigation-slider').length){
+        $('.project-navigation-slider').slick({
+        	slidesToShow: 2,
+        	slidesToScroll: 2,
+ 
+        	adaptiveHeight:  true,
+        	prevArrow: '<button class="slick-arrow slick-prev"><svg class="icon icon-arrow-down-sign-to-navigate"><use xlink:href="#icon-arrow-down-sign-to-navigate"></use></svg></button>',
+        	nextArrow: '<button class="slick-arrow slick-next"><svg class="icon icon-arrow-down-sign-to-navigate"><use xlink:href="#icon-arrow-down-sign-to-navigate"></use></svg></button>',
+        	responsive: [
+        		
+        		{
+        			breakpoint: 767,
+        			settings: {
+        				centerMode: true,
+        				slidesToShow: 3,
+        				slidesToScroll: 1,
+        				arrows: false,
+        				variableWidth: true,
+        				centerPadding: '30px',
+        			}
+        		},
+        		
+
+        	]
         });
     };
 
@@ -153,16 +180,19 @@ $(function(){
 		$(this).toggleClass('active')
 		$('.navbar-mobile').toggleClass('open')
 		$('.navbar-mobile-overlay').toggleClass('open')
+		return false;
 	})
 
 	$('.navbar-mobile-overlay').on('click', function(){
 		$('.navbar-toggle').removeClass('active')
 		$('.navbar-mobile').removeClass('open')
 		$('.navbar-mobile-overlay').removeClass('open')
+		return false;
 	})
 
 	$('.dropdown-item > .navbar-mobile-menu__link').on('click', function(){
 		$(this).toggleClass('active').next().slideToggle();
+		return false;
 	})
 
 	
@@ -191,6 +221,7 @@ $(function(){
 		var dataYoutubeLink = $(this).parents('.js-video').attr('data-youtube-link');
 		$(this).parents('.js-video').html('<iframe class="video-frame" src="https://www.youtube.com/embed/'+ dataYoutubeLink +'?autoplay=1" allowfullscreen></iframe>');
 		$('.js-video').addClass('active');
+		return false;
 	});
 
 
