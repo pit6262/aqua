@@ -2802,6 +2802,13 @@ h4.block__title {
       width: calc(50% - 2rem);
       margin-left: 1rem;
       margin-right: 1rem; }
+  .twentytwenty-after-label,
+  .twentytwenty-before-label {
+    font-size: 2.4rem !important;
+    bottom: 10px !important; }
+    .twentytwenty-after-label:before,
+    .twentytwenty-before-label:before {
+      height: 1.7rem !important; }
   /* 5.5 GALLERY -=-=-=-=-=-=-=-= */
   .gallery-block__img {
     height: 20rem; }
