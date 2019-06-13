@@ -854,6 +854,17 @@ h4.block__title {
       top: 0;
       margin-left: .5rem; }
 
+.photos {
+  list-style: none; }
+  .photos li {
+    margin-bottom: 2rem;
+    height: 26rem; }
+    .photos li img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover; }
+
 /* 5.1 ROMO -=-=-=-=-=-=-=-= */
 .promo {
   position: relative;

@@ -772,15 +772,23 @@
 	<div class="ball b"></div>
 	<div class="ball c"></div>
 </div>
-<script src="js/jquery-3.2.1.min.js?ver1.0"></script>
-
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/spectragram.min.js"></script>
 <script src="js/jquery.event.move.js"></script>
 <script src="js/jquery.twentytwenty.js"></script>
  <script>
     $(function(){
+    	jQuery.fn.spectragram.accessData = {
+			accessToken: '1545547720.6c07db5.fe0d4d94b80849798a1ec2a030be1bec'
+		};
+
+		$('ul.photos').spectragram('getUserFeed',{
+			max: 12,
+			size: "medium",
+			wrapEachWith: "<li class='col-xl-3 col-lg-4 col-sm-6'></li>"
+		});
       $(".twentytwenty-container").twentytwenty();
      
-
     });
     </script>
 <!-- <script src="js/jquery.mobile.custom.min.js"></script> -->

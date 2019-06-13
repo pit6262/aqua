@@ -226,10 +226,10 @@ $(function(){
 
 
 
-	if($('.instagram-list').length){
+	// if($('.instagram-list').length){
 		
-		$('.instagram-list').append('<iframe class="demo-preview-iframe" src="https://elfsight.com/wp-content/themes/elfsight/legacy/instalink/includes/instalink.php?username=aquacars_official&amp;hashtag=&amp;lang=ru&amp;show_heading=true&amp;scroll=false&amp;image_size=large&amp;width=100%25&amp;responsive=true&amp;height=860px&amp;bg_color=%23285989&amp;content_bg_color=%23F8F8F8&amp;font_color=%23FFFFFF&amp;ban=&amp;cache_media_time=0" style="width: 100%; height: 860px;"></iframe>'); 
-	}
+	// 	$('.instagram-list').append('<iframe class="demo-preview-iframe" src="https://elfsight.com/wp-content/themes/elfsight/legacy/instalink/includes/instalink.php?username=aquacars_official&amp;hashtag=&amp;lang=ru&amp;show_heading=true&amp;scroll=false&amp;image_size=large&amp;width=100%25&amp;responsive=true&amp;height=860px&amp;bg_color=%23285989&amp;content_bg_color=%23F8F8F8&amp;font_color=%23FFFFFF&amp;ban=&amp;cache_media_time=0" style="width: 100%; height: 860px;"></iframe>'); 
+	// }
 
 	
 });
