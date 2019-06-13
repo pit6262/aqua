@@ -10,7 +10,6 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css?ver1.0" />
 	<link rel="stylesheet" href="css/jquery.fancybox.css?ver1.0">
 	<link href="css/twentytwenty.css" rel="stylesheet" type="text/css" />
-	<!-- <script src="js/modernizr.js"></script> -->
 </head>
 <body class="loaded">
 
@@ -22,7 +21,7 @@
 
 	<!-- BEGIN CONTENT -->
 	<main class="main">
-		<section class="promo" style="background-image: url('img/bar-bg.jpg')">
+		<section class="promo lazy" data-src="img/bar-bg.jpg">
 			<!-- BEGIN HEADER -->
 			<header class="header">
 				<div class="header__top">
@@ -401,7 +400,7 @@
 							<div class="col-6 col-md-4 col-lg-6 col-xl-5">
 								<div class="menu-block">
 									
-									<div class="menu-block__img"><img src="img/tort.jpg" alt=""></div>
+									<div class="menu-block__img"><img class="lazy" data-src="img/tort.jpg" alt=""></div>
 									<div class="menu-block__title">Торт “Медовик”</div>
 									<div class="menu-block__price">150 руб.</div>
 									
@@ -410,7 +409,7 @@
 							<div class="col-6 col-md-4 col-lg-6 col-xl-5 offset-xl-1">
 								<div class="menu-block">
 									
-									<div class="menu-block__img"><img src="img/tort.jpg" alt=""></div>
+									<div class="menu-block__img"><img class="lazy" data-src="img/tort.jpg" alt=""></div>
 									<div class="menu-block__title">Торт “Медовик”</div>
 									<div class="menu-block__price">150 руб.</div>
 									
@@ -461,8 +460,8 @@
 					<div class="price-list__item">
 						<div class="price-list__head active">
 							<div class="price-list__icon">
-								<img src="img/plus.png" alt="" class="plus">
-								<img src="img/minus.png" alt="" class="minus">
+								<img class="lazy plus" data-src="img/plus.png" alt="">
+								<img class="lazy minus" data-src="img/minus.png" alt="">
 							</div>
 							<div class="price-list__title">Чай</div>
 							<div class="price-list__table">
@@ -474,70 +473,70 @@
 							<div class="menu-list">
 								<div class="menu-block">
 									<a href="img/bar_3.jpg" data-fancybox="gallery1" data-caption="Штрудель маковый">
-										<div class="menu-block__img"><img src="img/bar_3.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_3.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель маковый</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_4.jpg" data-fancybox="gallery1" data-caption="Штрудель яблочный">
-										<div class="menu-block__img"><img src="img/bar_4.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_4.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель яблочный</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/tort.jpg" data-fancybox="gallery1" data-caption="Торт “Медовик”">
-										<div class="menu-block__img"><img src="img/tort.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/tort.jpg" alt=""></div>
 										<div class="menu-block__title">Торт “Медовик”</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_1.jpg" data-fancybox="gallery1" data-caption="Торт “Наполеон”">
-										<div class="menu-block__img"><img src="img/bar_1.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_1.jpg" alt=""></div>
 										<div class="menu-block__title">Торт “Наполеон”</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_2.jpg" data-fancybox="gallery1" data-caption="Штрудель яблочный">
-										<div class="menu-block__img"><img src="img/bar_2.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_2.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель яблочный</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_3.jpg" data-fancybox="gallery1" data-caption="Штрудель маковый">
-										<div class="menu-block__img"><img src="img/bar_3.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_3.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель маковый</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_4.jpg" data-fancybox="gallery1" data-caption="Штрудель яблочный">
-										<div class="menu-block__img"><img src="img/bar_4.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_4.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель яблочный</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/tort.jpg" data-fancybox="gallery1" data-caption="Торт “Медовик”">
-										<div class="menu-block__img"><img src="img/tort.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/tort.jpg" alt=""></div>
 										<div class="menu-block__title">Торт “Медовик”</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_1.jpg" data-fancybox="gallery1" data-caption="Торт “Наполеон”">
-										<div class="menu-block__img"><img src="img/bar_1.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_1.jpg" alt=""></div>
 										<div class="menu-block__title">Торт “Наполеон”</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_2.jpg" data-fancybox="gallery1" data-caption="Штрудель яблочный">
-										<div class="menu-block__img"><img src="img/bar_2.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_2.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель яблочный</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
@@ -548,8 +547,8 @@
 					<div class="price-list__item">
 						<div class="price-list__head ">
 							<div class="price-list__icon">
-								<img src="img/plus.png" alt="" class="plus">
-								<img src="img/minus.png" alt="" class="minus">
+								<img class="lazy plus" data-src="img/plus.png" alt="">
+								<img class="lazy minus" data-src="img/minus.png" alt="">
 							</div>
 							<div class="price-list__title">Свежий кофе</div>
 							<div class="price-list__table">
@@ -561,70 +560,70 @@
 							<div class="menu-list">
 								<div class="menu-block">
 									<a href="img/bar_3.jpg" data-fancybox="gallery2" data-caption="Штрудель маковый">
-										<div class="menu-block__img"><img src="img/bar_3.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_3.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель маковый</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_4.jpg" data-fancybox="gallery2" data-caption="Штрудель яблочный">
-										<div class="menu-block__img"><img src="img/bar_4.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_4.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель яблочный</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/tort.jpg" data-fancybox="gallery2" data-caption="Торт “Медовик”">
-										<div class="menu-block__img"><img src="img/tort.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/tort.jpg" alt=""></div>
 										<div class="menu-block__title">Торт “Медовик”</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_1.jpg" data-fancybox="gallery2" data-caption="Торт “Наполеон”">
-										<div class="menu-block__img"><img src="img/bar_1.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_1.jpg" alt=""></div>
 										<div class="menu-block__title">Торт “Наполеон”</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_2.jpg" data-fancybox="gallery2" data-caption="Штрудель яблочный">
-										<div class="menu-block__img"><img src="img/bar_2.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_2.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель яблочный</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_3.jpg" data-fancybox="gallery2" data-caption="Штрудель маковый">
-										<div class="menu-block__img"><img src="img/bar_3.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_3.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель маковый</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_4.jpg" data-fancybox="gallery2" data-caption="Штрудель яблочный">
-										<div class="menu-block__img"><img src="img/bar_4.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_4.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель яблочный</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/tort.jpg" data-fancybox="gallery2" data-caption="Торт “Медовик”">
-										<div class="menu-block__img"><img src="img/tort.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/tort.jpg" alt=""></div>
 										<div class="menu-block__title">Торт “Медовик”</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_1.jpg" data-fancybox="gallery2" data-caption="Торт “Наполеон”">
-										<div class="menu-block__img"><img src="img/bar_1.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_1.jpg" alt=""></div>
 										<div class="menu-block__title">Торт “Наполеон”</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_2.jpg" data-fancybox="gallery2" data-caption="Штрудель яблочный">
-										<div class="menu-block__img"><img src="img/bar_2.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_2.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель яблочный</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
@@ -635,8 +634,8 @@
 					<div class="price-list__item">
 						<div class="price-list__head ">
 							<div class="price-list__icon">
-								<img src="img/plus.png" alt="" class="plus">
-								<img src="img/minus.png" alt="" class="minus">
+								<img class="lazy plus" data-src="img/plus.png" alt="">
+								<img class="lazy minus" data-src="img/minus.png" alt="">
 							</div>
 							<div class="price-list__title">Десерты</div>
 							<div class="price-list__table">
@@ -648,14 +647,14 @@
 							<div class="menu-list">
 								<div class="menu-block">
 									<a href="img/bar_3.jpg" data-fancybox="gallery3" data-caption="Штрудель маковый">
-										<div class="menu-block__img"><img src="img/bar_3.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_3.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель маковый</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_4.jpg" data-fancybox="gallery3" data-caption="Штрудель яблочный">
-										<div class="menu-block__img"><img src="img/bar_4.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_4.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель яблочный</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
@@ -666,8 +665,8 @@
 					<div class="price-list__item">
 						<div class="price-list__head ">
 							<div class="price-list__icon">
-								<img src="img/plus.png" alt="" class="plus">
-								<img src="img/minus.png" alt="" class="minus">
+								<img class="lazy plus" data-src="img/plus.png" alt="">
+								<img class="lazy minus" data-src="img/minus.png" alt="">
 							</div>
 							<div class="price-list__title">Напитки</div>
 							<div class="price-list__table">
@@ -679,21 +678,21 @@
 							<div class="menu-list">
 								<div class="menu-block">
 									<a href="img/bar_3.jpg" data-caption="Напитки" data-fancybox="gallery">
-										<div class="menu-block__img"><img src="img/bar_3.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_3.jpg" alt=""></div>
 										<div class="menu-block__title">Напитки</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/bar_4.jpg" data-caption="Штрудель яблочный" data-fancybox="gallery">
-										<div class="menu-block__img"><img src="img/bar_4.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/bar_4.jpg" alt=""></div>
 										<div class="menu-block__title">Штрудель яблочный</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
 								</div>
 								<div class="menu-block">
 									<a href="img/tort.jpg" data-caption="Торт “Медовик”" data-fancybox="gallery">
-										<div class="menu-block__img"><img src="img/tort.jpg" alt=""></div>
+										<div class="menu-block__img"><img class="lazy" data-src="img/tort.jpg" alt=""></div>
 										<div class="menu-block__title">Торт “Медовик”</div>
 										<div class="menu-block__price">150 руб.</div>
 									</a>
@@ -713,25 +712,25 @@
 				<div class="additional-goods">
 					<div class="additional-goods-item">
 						<div href="img/bar_2.jpg" data-caption="Рамка для номера RCS" data-fancybox="gallery5">
-							<div class="additional-goods-item__img"><img src="img/bar_2.jpg" alt=""></div>
+							<div class="additional-goods-item__img"><img class="lazy" data-src="img/bar_2.jpg" alt=""></div>
 							<div class="additional-goods-item__title">Рамка для номера RCS</div>
 						</div>
 					</div>
 					<div class="additional-goods-item">
 						<div href="img/bar_2.jpg" data-caption="Ковры полиуретановые салонные" data-fancybox="gallery5">
-							<div class="additional-goods-item__img"><img src="img/bar_2.jpg" alt=""></div>
+							<div class="additional-goods-item__img"><img class="lazy" data-src="img/bar_2.jpg" alt=""></div>
 							<div class="additional-goods-item__title">Ковры полиуретановые салонные</div>
 						</div>
 					</div>
 					<div class="additional-goods-item">
 						<div href="img/bar_2.jpg" data-caption="Ароматизаторы и парфюм для салона" data-fancybox="gallery5">
-							<div class="additional-goods-item__img"><img src="img/bar_2.jpg" alt=""></div>
+							<div class="additional-goods-item__img"><img class="lazy" data-src="img/bar_2.jpg" alt=""></div>
 							<div class="additional-goods-item__title">Ароматизаторы и парфюм для салона</div>
 						</div>
 					</div>
 					<div class="additional-goods-item">
 						<div href="img/bar_2.jpg" data-caption="Органайзеры в багажник" data-fancybox="gallery5">
-							<div class="additional-goods-item__img"><img src="img/bar_2.jpg" alt=""></div>
+							<div class="additional-goods-item__img"><img class="lazy" data-src="img/bar_2.jpg" alt=""></div>
 							<div class="additional-goods-item__title">Органайзеры в багажник</div>
 						</div>
 					</div>
@@ -1067,25 +1066,25 @@
 	<div class="ball c"></div>
 </div>
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.lazy.min.js"></script>
 <script src="js/spectragram.min.js"></script>
 <script src="js/jquery.event.move.js"></script>
 <script src="js/jquery.twentytwenty.js"></script>
- <script>
-    $(function(){
-    	jQuery.fn.spectragram.accessData = {
-			accessToken: '1545547720.6c07db5.fe0d4d94b80849798a1ec2a030be1bec'
-		};
+<script>
+$(function(){
+	jQuery.fn.spectragram.accessData = {
+		accessToken: '1545547720.6c07db5.fe0d4d94b80849798a1ec2a030be1bec'
+	};
 
-		$('ul.photos').spectragram('getUserFeed',{
-			max: 12,
-			size: "medium",
-			wrapEachWith: "<li class='col-xl-3 col-lg-4 col-sm-6'></li>"
-		});
-      $(".twentytwenty-container").twentytwenty();
-     
-    });
-    </script>
-<!-- <script src="js/jquery.mobile.custom.min.js"></script> -->
+	$('ul.photos').spectragram('getUserFeed',{
+		max: 12,
+		size: "medium",
+		wrapEachWith: "<li class='col-xl-3 col-lg-4 col-sm-6'></li>"
+	});
+  $(".twentytwenty-container").twentytwenty();
+ 
+});
+</script>
 <script async src="js/jquery.maskedinput.min.js?ver1.0"></script>
 <script async src="js/jquery.fancybox.min.js?ver1.0"></script>
 <script async src="js/slick.min.js?ver1.0"></script>

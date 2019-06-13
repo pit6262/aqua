@@ -224,8 +224,9 @@ $(function(){
 		return false;
 	});
 
-	$('.lazy').Lazy();
-
+	if($('.lazy').length){
+		$('.lazy').Lazy();
+	}
 
 });
 
