@@ -2934,7 +2934,7 @@ h4.block__title {
 @media screen and (max-width: 575px) {
   /* 4. Header */
   /* =============================== */
-  .navbar-mobile-wrap {
+  .navbar-mobile {
     width: 100%; }
   /* 5. main */
   /* =============================== */
