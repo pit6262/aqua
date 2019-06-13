@@ -227,12 +227,27 @@ $(function(){
 	if($('.lazy').length){
 		$('.lazy').Lazy();
 	}
+	if($('.twentytwenty-container').length){
+		$(".twentytwenty-container").twentytwenty();
+	}
 
 });
 
 
 window.onload = function () {
-	setTimeout( function(){  
+
+
+	setTimeout( function(){
+		jQuery.fn.spectragram.accessData = {
+			accessToken: '1545547720.6c07db5.fe0d4d94b80849798a1ec2a030be1bec'
+		};
+
+		$('ul.photos').spectragram('getUserFeed',{
+			max: 12,
+			size: "medium",
+			wrapEachWith: "<li class='col-xl-3 col-lg-4 col-sm-6'></li>"
+		});
+
 		ymaps.ready(init); 
 		var myMap; 
 		function init () { 
@@ -253,7 +268,7 @@ window.onload = function () {
 
 			myMap.geoObjects.add(myPlacemark);
 		}
-	}, 3000);
+	}, 2000);
 }
 
 
