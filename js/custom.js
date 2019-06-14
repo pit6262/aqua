@@ -219,7 +219,7 @@ $(function(){
 	
 	$('.video__play').on('click', function(){
 		var dataYoutubeLink = $(this).parents('.js-video').attr('data-youtube-link');
-		$(this).parents('.js-video').html('<iframe class="video-frame" src="https://www.youtube.com/embed/'+ dataYoutubeLink +'?autoplay=1" allowfullscreen></iframe>');
+		$(this).parents('.js-video').html('<iframe class="video-frame" src="https://www.youtube.com/embed/'+ dataYoutubeLink +'?autoplay=1" allow="autoplay" allowfullscreen></iframe>');
 		$('.js-video').addClass('active');
 		return false;
 	});
