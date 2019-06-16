@@ -224,22 +224,11 @@ $(function(){
 		return false;
 	});
 
-	if($('.lazy').length){
-		$('.lazy').Lazy();
-	}
-	if($('.twentytwenty-container').length){
-		$(".twentytwenty-container").twentytwenty();
-	}
+	
 
-});
-
-
-window.onload = function () {
-
-
-	setTimeout( function(){
+	if($('ul.photos').length){
 		jQuery.fn.spectragram.accessData = {
-			accessToken: '1545547720.6c07db5.fe0d4d94b80849798a1ec2a030be1bec'
+			accessToken: '2136707.12e2743.9576ae17af4e4ad4aebf6b72433c01fd'
 		};
 
 		$('ul.photos').spectragram('getUserFeed',{
@@ -247,7 +236,19 @@ window.onload = function () {
 			size: "medium",
 			wrapEachWith: "<li class='col-xl-3 col-lg-4 col-sm-6'></li>"
 		});
+	}
+	
+	if($('.lazy').length){
+		$('.lazy').Lazy();
+	}
+	if($('.twentytwenty-container').length){
+		$(".twentytwenty-container").twentytwenty();
+	}
+});
 
+
+window.onload = function () {
+	setTimeout( function(){
 		ymaps.ready(init); 
 		var myMap; 
 		function init () { 
